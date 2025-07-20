@@ -1,5 +1,6 @@
 package com.leonardo.trafficsim.models.vehicle;
 import com.leonardo.trafficsim.utils.Constants;
+import javafx.geometry.Rectangle2D;
 
 public class Vehicle {
     protected double positionX;
@@ -11,6 +12,9 @@ public class Vehicle {
     protected double maxSpeed;
     protected double fuelLevel;
     protected double fuelConsumption;
+    protected double width = Constants.DEFAULT_VEHICLE_WIDTH;
+    protected double height = Constants.DEFAULT_VEHICLE_HEIGHT;
+
 
     public Vehicle(
             double acceleration,
@@ -51,6 +55,10 @@ public class Vehicle {
         fuelLevel -= acceleration * Constants.FUEL_USAGE_RATE;
     }
 
+    // Getters
+    public Rectangle2D getHitbox() {
+        return new Rectangle2D(positionX, positionY, width, height);
+    }
     public double getPositionX() { return positionX; }
     public double getPositionY() { return positionY; }
     public double getSpeed() { return speed; }
@@ -61,6 +69,7 @@ public class Vehicle {
     public double getFuelLevel() { return fuelLevel; }
     public double getFuelConsumption() { return fuelConsumption; }
 
+    // Setters
     public void setPositionX(double positionX) { this.positionX = positionX; }
     public void setPositionY(double positionY) { this.positionY = positionY; }
     public void setSpeed(double speed) { this.speed = speed; }
