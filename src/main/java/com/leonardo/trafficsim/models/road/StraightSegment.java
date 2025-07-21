@@ -22,4 +22,11 @@ public class StraightSegment extends RoadSegment {
         return Math.hypot(endX - startX, endY - startY);
     }
 
+    @Override
+    public double calculateDistanceAlongSegment(double posX, double posY) {
+        double dx = posX - startX;
+        double dy = posY - startY;
+        return Math.hypot(dx, dy);
+    }
+
 }

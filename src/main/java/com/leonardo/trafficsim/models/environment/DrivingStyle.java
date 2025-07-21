@@ -1,4 +1,7 @@
 package com.leonardo.trafficsim.models.environment;
 
-public class DrivingStyle {
+public enum DrivingStyle {
+    AGGRESSIVE,
+    CAUTIOUS,
+    NORMAL
 }

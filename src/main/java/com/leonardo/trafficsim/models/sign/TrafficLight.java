@@ -19,6 +19,8 @@ public class TrafficLight extends TrafficSign {
         super(positionX, positionY);
         this.currentState = LightState.RED;
         this.timer = 0.0;
+        this.width = 0.4;
+        this.height = 1.2;
     }
 
     @Override

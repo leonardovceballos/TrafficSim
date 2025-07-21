@@ -24,6 +24,12 @@ public class CurvedSegment extends RoadSegment {
         this.endAngle = endAngle;
     }
 
+    @Override
+    public double calculateDistanceAlongSegment(double posX, double posY) {
+        double angle = Math.atan2(posY - centerY, posX - centerX);
+        return radius * Math.abs(angle - startAngle);
+    }
+
     // Getters
     public double getLength() {
         return this.radius * Math.abs(endAngle - startAngle);

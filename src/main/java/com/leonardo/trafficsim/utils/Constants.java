@@ -4,7 +4,7 @@ public class Constants {
 
     // Default Vehicle Parameters
     public static final double DEFAULT_ACCELERATION = 2.5;
-    public static final double DEFAULT_REACTION_POWER = 3.0;
+    public static final double DEFAULT_REACTION_POWER = 10.0; // m/s^2
     public static final double DEFAULT_REACTION_TIME = 1.5;
     public static final double DEFAULT_MAX_SPEED = 120.0; // km/h
     public static final double DEFAULT_FUEL_LEVEL = 100.0; // percent or liters
@@ -12,6 +12,8 @@ public class Constants {
     public static final double DEFAULT_VEHICLE_WIDTH = 2.0;  // meters
     public static final double DEFAULT_VEHICLE_HEIGHT = 4.5; // meters
     public static final double BRAKING_TRIGGER_DISTANCE = 10.0; // meters
+
+
 
     // Fuel Simulation Constants
     public static final double FUEL_USAGE_RATE = 0.05; // fuel units per tick per acceleration

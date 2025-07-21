@@ -4,6 +4,8 @@ public class StopSign extends TrafficSign {
 
     public StopSign(double positionX, double positionY) {
         super(positionX, positionY);
+        this.width = 0.75;
+        this.height = 0.75;
     }
 
     @Override
